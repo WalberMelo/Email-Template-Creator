@@ -1,0 +1,102 @@
+[debug] [2023-12-08T23:37:18.892Z] ----------------------------------------------------------------------
+[debug] [2023-12-08T23:37:18.892Z] Command:       /usr/local/bin/node /Users/walbermelo/.npm-global/bin/firebase init
+[debug] [2023-12-08T23:37:18.893Z] CLI Version:   13.0.1
+[debug] [2023-12-08T23:37:18.893Z] Platform:      darwin
+[debug] [2023-12-08T23:37:18.893Z] Node Version:  v18.14.2
+[debug] [2023-12-08T23:37:18.894Z] Time:          Fri Dec 08 2023 23:37:18 GMT+0000 (Western European Standard Time)
+[debug] [2023-12-08T23:37:18.894Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-12-08T23:37:18.896Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-12-08T23:37:18.896Z] > authorizing via signed-in user (devgrow2023@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/walbermelo/Desktop/Projects/email-template/frontend
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2023-12-08T23:39:48.938Z] > refreshing access token with scopes: []
+[debug] [2023-12-08T23:39:48.941Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-12-08T23:39:48.941Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-12-08T23:39:49.224Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2023-12-08T23:39:49.224Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-12-08T23:39:49.246Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2023-12-08T23:39:49.815Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2023-12-08T23:39:49.815Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] i  Using project weup-email-generator (WeUp) 
+[info] 
+=== Firestore Setup
+[debug] [2023-12-08T23:40:15.822Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/weup-email-generator/services/firestore.googleapis.com [none]
+[debug] [2023-12-08T23:40:15.822Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/weup-email-generator/services/firestore.googleapis.com x-goog-quota-user=projects/weup-email-generator
+[debug] [2023-12-08T23:40:17.062Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/weup-email-generator/services/firestore.googleapis.com 200
+[debug] [2023-12-08T23:40:17.062Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/weup-email-generator/services/firestore.googleapis.com [omitted]
+[debug] [2023-12-08T23:40:17.063Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/weup-email-generator/databases/(default) [none]
+[debug] [2023-12-08T23:40:17.568Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/weup-email-generator/databases/(default) 200
+[debug] [2023-12-08T23:40:17.568Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/weup-email-generator/databases/(default) {"name":"projects/weup-email-generator/databases/(default)","uid":"b3cf58d7-9783-4f8e-9003-ff9b2b4dbde1","createTime":"2023-12-08T22:08:45.653532Z","updateTime":"2023-12-08T22:08:45.653532Z","locationId":"eur3","type":"FIRESTORE_NATIVE","concurrencyMode":"PESSIMISTIC","versionRetentionPeriod":"3600s","earliestVersionTime":"2023-12-08T22:40:17.641076Z","appEngineIntegrationMode":"DISABLED","keyPrefix":"e","pointInTimeRecoveryEnablement":"POINT_IN_TIME_RECOVERY_DISABLED","deleteProtectionState":"DELETE_PROTECTION_DISABLED","etag":"IM68uNqBgYMDMJyc1J/tgIMD"}
+[debug] [2023-12-08T23:40:17.569Z] database_type: FIRESTORE_NATIVE
+[debug] [2023-12-08T23:40:17.569Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-12-08T23:40:17.570Z] > authorizing via signed-in user (devgrow2023@gmail.com)
+[debug] [2023-12-08T23:40:17.570Z] [iam] checking project weup-email-generator for permissions ["firebase.projects.get"]
+[debug] [2023-12-08T23:40:17.570Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/weup-email-generator:testIamPermissions [none]
+[debug] [2023-12-08T23:40:17.571Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/weup-email-generator:testIamPermissions x-goog-quota-user=projects/weup-email-generator
+[debug] [2023-12-08T23:40:17.571Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/weup-email-generator:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-12-08T23:40:18.400Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/weup-email-generator:testIamPermissions 200
+[debug] [2023-12-08T23:40:18.400Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/weup-email-generator:testIamPermissions {"permissions":["firebase.projects.get"]}
+[info] 
+[info] Firestore Security Rules allow you to define how and when to allow
+[info] requests. You can keep these rules in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[debug] [2023-12-08T23:41:42.892Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/weup-email-generator/releases pageSize=10&pageToken=
+[debug] [2023-12-08T23:41:43.826Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/weup-email-generator/releases 200
+[debug] [2023-12-08T23:41:43.826Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/weup-email-generator/releases {"releases":[{"name":"projects/weup-email-generator/releases/cloud.firestore","rulesetName":"projects/weup-email-generator/rulesets/dd6ce15b-9703-4d31-a93d-7d09b504547d","createTime":"2023-12-08T22:08:52.516986Z","updateTime":"2023-12-08T22:08:52.516986Z"},{"name":"projects/weup-email-generator/releases/firebase.storage/weup-email-generator.appspot.com","rulesetName":"projects/weup-email-generator/rulesets/099bb361-69e5-4dad-882c-7d70bd99572f","createTime":"2023-12-08T22:16:00.969004Z","updateTime":"2023-12-08T22:16:00.969004Z"}]}
+[debug] [2023-12-08T23:41:43.826Z] Found ruleset: projects/weup-email-generator/rulesets/dd6ce15b-9703-4d31-a93d-7d09b504547d
+[debug] [2023-12-08T23:41:43.827Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/weup-email-generator/rulesets/dd6ce15b-9703-4d31-a93d-7d09b504547d [none]
+[debug] [2023-12-08T23:41:44.604Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/weup-email-generator/rulesets/dd6ce15b-9703-4d31-a93d-7d09b504547d 200
+[debug] [2023-12-08T23:41:44.604Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/weup-email-generator/rulesets/dd6ce15b-9703-4d31-a93d-7d09b504547d [omitted]
+[info] 
+[info] Firestore indexes allow you to perform complex queries while
+[info] maintaining performance that scales with the size of the result
+[info] set. You can keep index definitions in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[debug] [2023-12-08T23:41:50.620Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/weup-email-generator/databases/(default)/collectionGroups/-/indexes [none]
+[debug] [2023-12-08T23:41:50.623Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/weup-email-generator/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* [none]
+[debug] [2023-12-08T23:41:51.058Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/weup-email-generator/databases/(default)/collectionGroups/-/indexes 200
+[debug] [2023-12-08T23:41:51.058Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/weup-email-generator/databases/(default)/collectionGroups/-/indexes {}
+[debug] [2023-12-08T23:41:51.564Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/weup-email-generator/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* 200
+[debug] [2023-12-08T23:41:51.564Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/weup-email-generator/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* {"fields":[{"name":"projects/weup-email-generator/databases/(default)/collectionGroups/__default__/fields/*","indexConfig":{"indexes":[{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"ASCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"DESCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","arrayConfig":"CONTAINS"}],"state":"READY"}]}}]}
+[info] 
+=== Hosting Setup
+[debug] [2023-12-08T23:41:51.569Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/weup-email-generator [none]
+[debug] [2023-12-08T23:41:52.017Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/weup-email-generator 200
+[debug] [2023-12-08T23:41:52.017Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/weup-email-generator {"projectId":"weup-email-generator","projectNumber":"575930438710","displayName":"WeUp","name":"projects/weup-email-generator","resources":{"hostingSite":"weup-email-generator","storageBucket":"weup-email-generator.appspot.com","locationId":"europe-west"},"state":"ACTIVE","etag":"1_ca733a93-513b-4437-b0da-86998bbc8616"}
+[info] 
+[info] i  Detected a .git folder at /Users/walbermelo/Desktop/Projects/email-template/frontend 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=543045068&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
+[debug] [2023-12-08T23:42:53.823Z] >>> [apiv2][query] POST https://github.com/login/oauth/access_token [none]
+[debug] [2023-12-08T23:42:53.825Z] >>> [apiv2][body] POST https://github.com/login/oauth/access_token [stream]
+[debug] [2023-12-08T23:42:54.289Z] <<< [apiv2][status] POST https://github.com/login/oauth/access_token 200
+[debug] [2023-12-08T23:42:54.290Z] <<< [apiv2][body] POST https://github.com/login/oauth/access_token {"access_token":"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","token_type":"bearer","scope":"read:user,repo"}
+[debug] [2023-12-08T23:42:54.303Z] >>> [apiv2][query] GET https://api.github.com/user [none]
+[debug] [2023-12-08T23:42:54.855Z] <<< [apiv2][status] GET https://api.github.com/user 200
+[debug] [2023-12-08T23:42:54.856Z] <<< [apiv2][body] GET https://api.github.com/user {"login":"WalberMelo","id":84498612,"node_id":"MDQ6VXNlcjg0NDk4NjEy","avatar_url":"https://avatars.githubusercontent.com/u/84498612?v=4","gravatar_id":"","url":"https://api.github.com/users/WalberMelo","html_url":"https://github.com/WalberMelo","followers_url":"https://api.github.com/users/WalberMelo/followers","following_url":"https://api.github.com/users/WalberMelo/following{/other_user}","gists_url":"https://api.github.com/users/WalberMelo/gists{/gist_id}","starred_url":"https://api.github.com/users/WalberMelo/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/WalberMelo/subscriptions","organizations_url":"https://api.github.com/users/WalberMelo/orgs","repos_url":"https://api.github.com/users/WalberMelo/repos","events_url":"https://api.github.com/users/WalberMelo/events{/privacy}","received_events_url":"https://api.github.com/users/WalberMelo/received_events","type":"User","site_admin":false,"name":"Walber Melo","company":null,"blog":"www.walbermelo.com","location":null,"email":null,"hireable":true,"bio":"I'm a Full Stack Developer with a deep programming interest, seeking an environment for skill application, growth, and self-development.","twitter_username":null,"public_repos":22,"public_gists":0,"followers":23,"following":33,"created_at":"2021-05-20T07:48:45Z","updated_at":"2023-11-25T19:01:02Z","private_gists":0,"total_private_repos":5,"owned_private_repos":5,"disk_usage":66791,"collaborators":0,"two_factor_authentication":false,"plan":{"name":"free","space":976562499,"collaborators":0,"private_repos":10000}}
+[info] 
+[info] ✔  Success! Logged into GitHub as WalberMelo 
+[info] 
