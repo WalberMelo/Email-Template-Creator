@@ -1,21 +1,25 @@
-"use client";
+import { ToastContainer } from "react-toastify";
 
-import { EmailDataProvider } from "@/context/EmailDataProvider";
+import DashboardContent from "./DashboardContent";
+import Layout from "./layout";
 
-import { EmailForm } from "../ui/dashboard/EmailForm/EmailForm.component";
-import EmailTemplate from "../ui/dashboard/EmailTemplate/EmailTemplate.component";
-import Header from "../ui/header/Header.component";
+import "react-toastify/dist/ReactToastify.css";
 
-export default async function Dashboard() {
+export default function Dashboard() {
   return (
-    <main className="bg-white">
-      <Header />
-      <section className="grid grid-cols-2 gap-4 p-10">
-        <EmailDataProvider>
-          <EmailForm />
-          <EmailTemplate />
-        </EmailDataProvider>
-      </section>
-    </main>
+    <Layout>
+      <ToastContainer
+        position="top-right" // Set the position
+        autoClose={4000} // Set other configurations as needed
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable={false}
+        pauseOnHover
+      />
+      <DashboardContent />
+    </Layout>
   );
 }

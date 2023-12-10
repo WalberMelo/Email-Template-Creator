@@ -8,7 +8,7 @@ const Header: React.FC = () => {
       <Image
         width={220}
         height={220}
-        src="https://res.cloudinary.com/devwm/image/upload/v1702041217/Articles/MJML%20email/tmgqcttn1k2aot222stb.png"
+        src="https://res.cloudinary.com/devgrow/image/upload/v1702038549/weup/email_template/xpcirhdm1immbv1k9lhe.png"
         alt="Company logo"
         className="ml-10"
       ></Image>

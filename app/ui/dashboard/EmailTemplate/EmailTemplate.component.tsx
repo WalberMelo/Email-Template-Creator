@@ -55,7 +55,7 @@ const EmailTemplate: React.FC<EmailTemplateProps> = () => {
         <div className="display: flex justify-center mt-5 mb-5">
           <a
             href={emailData?.link}
-            className="inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4"
+            className="inline-block bg-teal-900 text-white font-bold py-2 px-4 rounded mt-4"
           >
             Encuesta
           </a>

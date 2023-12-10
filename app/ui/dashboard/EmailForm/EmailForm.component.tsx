@@ -1,6 +1,6 @@
 "use client";
-import React, { useState } from "react";
-import toast, { Toaster } from "react-hot-toast";
+import React from "react";
+import { toast } from "react-toastify";
 
 import { POST } from "@/api/actions";
 import { useEmailDataContext } from "@/context/EmailDataContext";
@@ -10,9 +10,7 @@ import { SubmitButton } from "@/components/SubmitButton";
 
 export const EmailForm = () => {
   const { emailData, setEmailData } = useEmailDataContext();
-  const [emailSent, setEmailSent] = useState<boolean>(false);
 
-  //TODO: Check toast ERROR
   const handleSubmit: React.FormEventHandler<HTMLFormElement> = async (
     e: React.FormEvent<HTMLFormElement>
   ) => {
@@ -23,17 +21,16 @@ export const EmailForm = () => {
       const response = await POST(emailData);
 
       if (response.message === "Email sent successfully!") {
-        setEmailSent(true);
         toast.success(`${response.message}`);
         form.reset();
-      }
-      {
+      } else {
         toast.error(`${response.message}`);
         console.log(response.message);
       }
     } catch (e) {
       if (e instanceof Error) {
         console.log(`${e.message}`);
+        toast.error("Something went wrong on the server!");
       }
     }
   };
@@ -49,96 +46,103 @@ export const EmailForm = () => {
   };
 
   return (
-    <form
-      method="post"
-      className="bg-red-100 rounded-md shadow-md p-4  text-gray-700"
-      onSubmit={handleSubmit}
-    >
-      {emailSent && <Toaster />}
-      <h2 className="text-2xl font-bold">Email Template Generator</h2>
-      {/*  Email */}
-      <FormInput
-        label="Email"
-        placeholder="exampleinc@email.com"
-        onChange={handleOnchange}
-        type="email"
-        name="email"
-        required
-      />
+    <>
+      <form
+        method="post"
+        className="bg-red-100 rounded-md shadow-md p-4  text-gray-700"
+        onSubmit={handleSubmit}
+      >
+        <h2 className="text-lg text-neutral-600 font-bold text-color">
+          Email Template Fields
+        </h2>
+        {/*  Email */}
+        <FormInput
+          label="Email"
+          placeholder="exampleinc@email.com"
+          onChange={handleOnchange}
+          type="email"
+          name="email"
+          required
+        />
 
-      {/*  Subject */}
-      <FormInput
-        label="Subject"
-        value="Tu Voz, Nuestra Inspiración: Gana con WeUp"
-        onChange={handleOnchange}
-        type="text"
-        name="subject"
-        required
-      />
+        {/*  Subject */}
+        <FormInput
+          label="Subject"
+          value="Tu Voz, Nuestra Inspiración: Gana con WeUp"
+          onChange={handleOnchange}
+          type="text"
+          name="subject"
+          required
+        />
 
-      {/*  Name */}
-      <FormInput
-        label=" Person Name"
-        placeholder="John Doe"
-        onChange={handleOnchange}
-        type="text"
-        name="name"
-        required
-      />
+        {/*  Name */}
+        <FormInput
+          label=" Person Name"
+          placeholder="John Doe"
+          onChange={handleOnchange}
+          type="text"
+          name="name"
+          required
+        />
 
-      {/*  Company */}
-      <FormInput
-        label="Company"
-        placeholder="Example Inc."
-        onChange={handleOnchange}
-        type="text"
-        name="company"
-        required
-      />
+        {/*  Company */}
+        <FormInput
+          label="Company"
+          placeholder="Example Inc."
+          onChange={handleOnchange}
+          type="text"
+          name="company"
+          required
+        />
 
-      {/*  Message */}
-      <FormInput
-        label="About the company"
-        placeholder="la gran capacidad de crecimiento de la empresa"
-        type="textarea"
-        onChange={handleOnchange}
-        name="message"
-        required
-      />
+        {/*  Message */}
+        <FormInput
+          label="About the company"
+          placeholder="la gran capacidad de crecimiento de la empresa"
+          type="textarea"
+          onChange={handleOnchange}
+          name="message"
+          required
+        />
 
-      {/*  gift */}
-      <FormInput
-        label=" Gift to offer"
-        type="text"
-        onChange={handleOnchange}
-        name="gift"
-        placeholder="un bonus de 50€"
-        required
-      />
+        {/*  gift */}
+        <FormInput
+          label=" Gift"
+          type="text"
+          onChange={handleOnchange}
+          name="gift"
+          placeholder="un bonus de 50€"
+          required
+        />
 
-      {/*  date */}
-      <FormInput
-        label="Draw date"
-        type="date"
-        onChange={handleOnchange}
-        name="date"
-        required
-      />
+        {/*  date */}
+        <FormInput
+          label="Draw date"
+          type="date"
+          onChange={handleOnchange}
+          name="date"
+          required
+        />
 
-      {/*  link survey */}
-      <FormInput
-        value="https://docs.google.com/forms/d/e/1FAIpQLSfYkd8mFEALIm2mjPYBIHEbd9rtp9OJ0_c992cRzjmkanlLpw/viewform"
-        label="Survey Link"
-        type="text"
-        onChange={handleOnchange}
-        name="link"
-        required
-      />
+        {/*  link survey */}
+        <FormInput
+          value="https://docs.google.com/forms/d/e/1FAIpQLSfYkd8mFEALIm2mjPYBIHEbd9rtp9OJ0_c992cRzjmkanlLpw/viewform"
+          label="Survey Link"
+          type="text"
+          onChange={handleOnchange}
+          name="link"
+          required
+        />
+        <p className="text-sm italic">
+          *The link will be inject on{" "}
+          <span className="not-italic">"Encuesta"</span> button.
+        </p>
 
-      {/*  Button */}
-      <div className="mt-4 flex justify-between pt-6">
-        <SubmitButton />
-      </div>
-    </form>
+        {/*  Button */}
+        <div className="mt-4 flex justify-between pt-6">
+          <SubmitButton />
+        </div>
+      </form>
+    </>
   );
 };

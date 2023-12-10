@@ -1,4 +1,4 @@
-interface EmailDataProps {
+export interface EmailDataProps {
   email: string;
   subject: string;
   name: string;
