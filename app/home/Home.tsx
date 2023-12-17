@@ -16,13 +16,15 @@ export default function Home() {
       </Head>
       <main className=" flex flex-col items-center  px-4">
         <Image
+          data-testid="logo"
+          priority
           width={120}
           height={120}
           src="https://res.cloudinary.com/devgrow/image/upload/v1702038276/weup/email_template/geeeenl6ddm554s2pjy8.png"
           alt="Company logo"
           className="pb-5"
         ></Image>
-        <LoginForm />
+        {/* <LoginForm /> */}
       </main>
     </>
   );

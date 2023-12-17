@@ -1,4 +1,4 @@
-import { EmailFormProps } from "../app/ui/dashboard/EmailForm/EmailForm.interface";
+import { EmailFormProps } from "../ui/dashboard/EmailForm/EmailForm.interface";
 
 export async function POST(props: EmailFormProps) {
   const res = await fetch("http://localhost:8080/create", {

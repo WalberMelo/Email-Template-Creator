@@ -23,9 +23,12 @@ export const FormInput = ({
 }: FormFieldProps) => {
   return (
     <div className="mt-4">
-      <label className="text-gray-700 text-sm font-medium">{label}</label>
+      <label htmlFor={name} className="text-gray-700 text-sm font-medium">
+        {label}
+      </label>
       {type === "textarea" ? (
         <textarea
+          data-testid="text-area"
           id={name}
           name={name}
           className="w-full p-2 border rounded-md focus:border-indigo-500"
@@ -35,6 +38,7 @@ export const FormInput = ({
         />
       ) : (
         <input
+          data-testid="form-input"
           type={type}
           id={name}
           name={name}

@@ -19,7 +19,10 @@
       }
     ],
     "paths": {
-      "@/*": ["./*"]
+      // "@/*": ["./*"],
+      "@/*": ["./app/*"],
+      "@/components/*": ["./components/*"],
+      "@/context/*": ["./context/*"]
     }
   },
   "include": [
@@ -27,7 +30,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "components/SubmitButton.tsx",
+    "components/submit-button/SubmitButton.component.tsx",
     "configuration/firebase.config.js"
   ],
   "exclude": ["node_modules"]

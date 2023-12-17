@@ -2,11 +2,11 @@
 import React from "react";
 import { toast } from "react-toastify";
 
-import { POST } from "@/api/actions";
 import { useEmailDataContext } from "@/context/EmailDataContext";
+import { POST } from "@/lib/actions";
 
-import { FormInput } from "@/components/FormInput";
-import { SubmitButton } from "@/components/SubmitButton";
+import { FormInput } from "@/components/form-input/FormInput.component";
+import { SubmitButton } from "@/components/submit-button/SubmitButton.component";
 
 export const EmailForm = () => {
   const { emailData, setEmailData } = useEmailDataContext();

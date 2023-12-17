@@ -1,11 +1,11 @@
 import { ToastContainer } from "react-toastify";
 
-import DashboardContent from "./DashboardContent";
+import Dashboard from "./(overview)/Dashboard.component";
 import Layout from "./layout";
 
 import "react-toastify/dist/ReactToastify.css";
 
-export default function Dashboard() {
+export default function page() {
   return (
     <Layout>
       <ToastContainer
@@ -19,7 +19,7 @@ export default function Dashboard() {
         draggable={false}
         pauseOnHover
       />
-      <DashboardContent />
+      <Dashboard />
     </Layout>
   );
 }
