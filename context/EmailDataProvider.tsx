@@ -2,7 +2,7 @@
 
 import React, { ReactNode, useState } from "react";
 
-import { EmailDataProps } from "@/app/ui/dashboard/EmailTemplate/EmailTemplate.interface";
+import { EmailDataProps } from "@/ui/dashboard/EmailTemplate/EmailTemplate.interface";
 import { EmailDataContext, initialEmailData } from "./EmailDataContext";
 
 export const EmailDataProvider: React.FC<{ children: ReactNode }> = ({

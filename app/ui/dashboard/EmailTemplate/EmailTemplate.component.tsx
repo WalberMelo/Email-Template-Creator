@@ -36,7 +36,8 @@ const EmailTemplate: React.FC<EmailTemplateProps> = () => {
 
         {/* Content based on EmailData */}
         <p className="font-bold mb-4">
-          Hola {emailData?.name || "[Person Name]"},
+          Hola <strong>{emailData?.name || "[Person Name]"}</strong>
+          {},
         </p>
         <p className="mb-2">
           Espero que todo vaya bien. He estado siguiendo tu trabajo en{" "}

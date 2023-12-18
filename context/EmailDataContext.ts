@@ -1,8 +1,8 @@
 import React, { createContext, useContext } from "react";
 
-import { EmailDataProps } from "@/app/ui/dashboard/EmailTemplate/EmailTemplate.interface";
+import { EmailDataProps } from "@/ui/dashboard/EmailTemplate/EmailTemplate.interface";
 
-interface EmailDataContextProps {
+export interface EmailDataContextProps {
   emailData: EmailDataProps;
   setEmailData: React.Dispatch<React.SetStateAction<EmailDataProps>>;
 }

@@ -126,11 +126,11 @@ export const EmailForm = () => {
 
         {/*  link survey */}
         <FormInput
+          type="text"
+          name="link"
           value="https://docs.google.com/forms/d/e/1FAIpQLSfYkd8mFEALIm2mjPYBIHEbd9rtp9OJ0_c992cRzjmkanlLpw/viewform"
           label="Survey Link"
-          type="text"
           onChange={handleOnchange}
-          name="link"
           required
         />
         <p className="text-sm italic">
