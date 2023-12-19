@@ -15,10 +15,12 @@ module.exports = {
     "/node_modules/",
     "<rootDir>/tailwind.config.ts",
     "<rootDir>/app/layout.tsx",
+    "<rootDir>/app/page.tsx",
     "<rootDir>/app/dashboard/layout.tsx",
     "<rootDir>/app/ui/dashboard/EmailForm/EmailForm.interface.ts",
     "<rootDir>/app/ui/dashboard/EmailTemplate/EmailTemplate.interface.ts",
     "<rootDir>/app/ui/dashboard/EmailTemplate/EmailTemplate.mock.ts",
+    "<rootDir>/configuration/firebase.config.js",
   ],
   moduleNameMapper: {
     // Handle CSS imports (with CSS modules)

@@ -4,7 +4,10 @@ import Image from "next/image";
 
 const Header: React.FC = () => {
   return (
-    <div className="display:flex  mb-2 bg-gradient-to-r from-white to-red-500 ">
+    <div
+      data-testid="logo"
+      className="display:flex  mb-2 bg-gradient-to-r from-white to-red-500 "
+    >
       <Image
         width={220}
         height={220}
