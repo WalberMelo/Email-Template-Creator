@@ -1,9 +1,9 @@
 "use client";
 
-import Head from "next/head";
-import Image from "next/image";
+import Head from 'next/head';
+import Image from 'next/image';
 
-import LoginForm from "../ui/login/LoginForm.component";
+import LoginForm from '../ui/login/LoginForm.component';
 
 export default function Home() {
   return (
@@ -24,7 +24,7 @@ export default function Home() {
           alt="Company logo"
           className="pb-5"
         ></Image>
-        {/* <LoginForm /> */}
+        <LoginForm />
       </main>
     </>
   );
