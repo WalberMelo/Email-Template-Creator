@@ -1,7 +1,6 @@
-import { defineConfig } from "cypress";
+import { defineConfig } from 'cypress';
 
 require("dotenv").config();
-console.log(process.env.CYPRESS_USER_EMAIL, process.env.CYPRESS_USER_PASSWORD);
 
 export default defineConfig({
   env: {

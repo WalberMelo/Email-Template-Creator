@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 
-import { useAuth } from "@/context/AuthContext";
-import { useRouter } from "next/navigation";
+import { useAuth } from '@/context/AuthContext';
+import { useRouter } from 'next/navigation';
 
 const LogoutButton = () => {
   const { logOut } = useAuth();
@@ -10,6 +10,7 @@ const LogoutButton = () => {
   return (
     <div className="flex flex-row-reverse mx-auto mr-10  text-gray-600">
       <button
+        data-testid="logout-button"
         onClick={() => {
           logOut();
           router.push("/");

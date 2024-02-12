@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 interface FormFieldProps {
   label: string;
@@ -28,7 +28,7 @@ export const FormInput = ({
       </label>
       {type === "textarea" ? (
         <textarea
-          data-testid="text-area"
+          data-testid={`text-area-${name}`}
           id={name}
           name={name}
           className="w-full p-2 border rounded-md focus:border-indigo-500"
@@ -38,7 +38,7 @@ export const FormInput = ({
         />
       ) : (
         <input
-          data-testid="form-input"
+          data-testid={`form-input-${name}`}
           type={type}
           id={name}
           name={name}

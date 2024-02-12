@@ -1,8 +1,8 @@
-import { fireEvent, render, waitFor } from "@testing-library/react";
-import React from "react";
-import { toast } from "react-toastify";
+import { fireEvent, render, waitFor } from '@testing-library/react';
+import React from 'react';
+import { toast } from 'react-toastify';
 
-import { EmailForm } from "./EmailForm.component";
+import { EmailForm } from './EmailForm.component';
 
 jest.mock("react-toastify", () => ({
   toast: {
@@ -31,9 +31,15 @@ describe("EmailForm component", () => {
   });
 
   it("handles successful form submission", async () => {
-    const { getAllByTestId, getByTestId } = render(<EmailForm />);
+    const { getByTestId } = render(<EmailForm />);
     let submitButton = getByTestId("submit-form--btn");
-    let inputs = getAllByTestId("form-input");
+    let email = getByTestId("form-input-email");
+    let subject = getByTestId("form-input-subject");
+    let name = getByTestId("form-input-name");
+    let company = getByTestId("form-input-company");
+    let message = getByTestId("form-input-message");
+    let date = getByTestId("form-input-date");
+    let link = getByTestId("form-input-link");
     let textArea = getByTestId("text-area");
 
     const mockResponse = { message: "Email sent successfully!" };
@@ -42,29 +48,29 @@ describe("EmailForm component", () => {
     });
 
     // Simulate user input in the form
-    fireEvent.change(inputs[0], {
+    fireEvent.change(email, {
       target: { value: "test@example.com" },
     });
 
-    fireEvent.change(inputs[1], {
+    fireEvent.change(subject, {
       target: { value: "Tu Voz, Nuestra Inspiración: Gana con WeUp" },
     });
-    fireEvent.change(inputs[2], {
+    fireEvent.change(name, {
       target: { value: "Walber Melo" },
     });
-    fireEvent.change(inputs[3], {
+    fireEvent.change(company, {
       target: { value: "Example Inc." },
     });
     fireEvent.change(textArea, {
       target: { value: "la gran capacidad de crecimiento de la empresa" },
     });
-    fireEvent.change(inputs[4], {
+    fireEvent.change(message, {
       target: { value: "un bonus de 50€" },
     });
-    fireEvent.change(inputs[5], {
+    fireEvent.change(date, {
       target: { value: "15-12-2023" },
     });
-    fireEvent.change(inputs[6], {
+    fireEvent.change(link, {
       target: {
         value:
           "https://docs.google.com/forms/d/e/1FAIpQLSfYkd8mFEALIm2mjPYBIHEbd9rtp9OJ0_c992cRzjmkanlLpw/viewform",

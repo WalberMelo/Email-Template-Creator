@@ -1,12 +1,12 @@
 "use client";
-import React from "react";
-import { toast } from "react-toastify";
+import React from 'react';
+import { toast } from 'react-toastify';
 
-import { useEmailDataContext } from "@/context/EmailDataContext";
-import { POST } from "@/lib/actions";
+import { useEmailDataContext } from '@/context/EmailDataContext';
+import { POST } from '@/lib/actions';
 
-import { FormInput } from "@/components/form-input/FormInput.component";
-import { SubmitButton } from "@/components/submit-button/SubmitButton.component";
+import { FormInput } from '@/components/form-input/FormInput.component';
+import { SubmitButton } from '@/components/submit-button/SubmitButton.component';
 
 export const EmailForm = () => {
   const { emailData, setEmailData } = useEmailDataContext();
@@ -58,13 +58,12 @@ export const EmailForm = () => {
         {/*  Email */}
         <FormInput
           label="Email"
-          placeholder="exampleinc@email.com"
+          placeholder="example@email.com"
           onChange={handleOnchange}
           type="email"
           name="email"
           required
         />
-
         {/*  Subject */}
         <FormInput
           label="Subject"
@@ -74,7 +73,6 @@ export const EmailForm = () => {
           name="subject"
           required
         />
-
         {/*  Name */}
         <FormInput
           label=" Person Name"
@@ -84,7 +82,6 @@ export const EmailForm = () => {
           name="name"
           required
         />
-
         {/*  Company */}
         <FormInput
           label="Company"
@@ -94,7 +91,6 @@ export const EmailForm = () => {
           name="company"
           required
         />
-
         {/*  Message */}
         <FormInput
           label="About the company"
@@ -104,7 +100,6 @@ export const EmailForm = () => {
           name="message"
           required
         />
-
         {/*  gift */}
         <FormInput
           label=" Gift"
@@ -114,7 +109,6 @@ export const EmailForm = () => {
           placeholder="un bonus de 50€"
           required
         />
-
         {/*  date */}
         <FormInput
           label="Draw date"
@@ -123,7 +117,6 @@ export const EmailForm = () => {
           name="date"
           required
         />
-
         {/*  link survey */}
         <FormInput
           type="text"
@@ -137,7 +130,6 @@ export const EmailForm = () => {
           *The link will be inject on{" "}
           <span className="not-italic">"Encuesta"</span> button.
         </p>
-
         {/*  Button */}
         <div className="mt-4 flex justify-between pt-6">
           <SubmitButton />
