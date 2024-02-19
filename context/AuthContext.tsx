@@ -31,7 +31,7 @@ export const AuthContextProvider = ({
   const [user, setUser] = useState<UserType>({ email: null, uid: null });
   const [loading, setLoading] = useState<Boolean>(true);
 
-  // Update the state depending on auth
+  //Update the state depending on auth
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
@@ -65,6 +65,7 @@ export const AuthContextProvider = ({
     setUser({ email: null, uid: null });
     return await signOut(auth);
   };
+
   // Wrap the children with the context provider
   return (
     <AuthContext.Provider value={{ user, signUp, logIn, logOut }}>

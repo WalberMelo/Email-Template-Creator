@@ -9,7 +9,11 @@ const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
   const { user } = useAuth();
 
   useEffect(() => {
-    if (!user.uid) {
+    const firebaseUserKey = `firebase:authUser:${process.env.NEXT_PUBLIC_FIREBASE_API_KEY}:[DEFAULT]`;
+    const firebaseUserData = localStorage.getItem(firebaseUserKey);
+    console.log(firebaseUserData);
+
+    if (!user.uid || !firebaseUserData) {
       router.push("/");
     }
   }, [router, user]);

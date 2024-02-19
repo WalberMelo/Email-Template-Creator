@@ -33,5 +33,5 @@
     "components/submit-button/SubmitButton.component.tsx",
     "configuration/firebase.config.js"
   ],
-  "exclude": ["node_modules"]
+  "exclude": ["cypress.config.ts", "cypress", "node_modules"]
 }

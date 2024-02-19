@@ -1,11 +1,25 @@
 "use client";
 
-import Head from 'next/head';
-import Image from 'next/image';
+import { useEffect } from "react";
 
-import LoginForm from '../ui/login/LoginForm.component';
+import Head from "next/head";
+import Image from "next/image";
+import { useRouter } from "next/navigation";
+
+import LoginForm from "../ui/login/LoginForm.component";
 
 export default function Home() {
+  const router = useRouter();
+
+  useEffect(() => {
+    const firebaseUserKey = `firebase:authUser:${process.env.NEXT_PUBLIC_FIREBASE_API_KEY}:[DEFAULT]`;
+    const firebaseUserData = localStorage.getItem(firebaseUserKey);
+    if (firebaseUserData) {
+      console.log("Firebase user data found in local storage.");
+      router.push("/dashboard");
+    }
+  }, []);
+
   return (
     <>
       <Head>
